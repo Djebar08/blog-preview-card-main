@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,800;1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colore-yellow : hsl(47, 88%, 63%);
+    --co-white: hsl(0, 0%, 100%);
+    --co-grey: hsl(0, 0%, 50%);
+    --co-black: hsl(0, 0%, 7%);
+}
+
+body{
+    font-family: "Figtree", sans-serif;
+    min-height: 100vh;
+    background-color: var(--colore-yellow);
+    display: grid;
+    place-content: center;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.card{
+    background-color: var(--co-white);
+    max-width: 350px;
+    padding: 1.5rem;
+    margin: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    outline: 1px solid var(--co-black);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--co-black);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 15px;
+    right: -15px;
+    border-radius: 1rem;
+}
+.card img{
+    border-radius: 15px;
+}
+.card .Learning{
+    background-color: var(--colore-yellow);
+    width: min-content;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: 800;
+    border-radius: 0.5rem;
+}
+.card .Published{
+   margin: 1.5rem 0;
+}
+
+.card h1 a{
+    font-size: 1.5rem;
+    color: var(--co-black);
+    text-decoration: none;
+    font-weight: 800;
+    line-height: 1;
+}
+.card h1 a:hover{
+    color: var(--colore-yellow);
+}
+.card .description{
+    margin-top: 1.5rem;
+    color: var(--co-grey);
+    line-height: 1.5;
+}
+.card .greg {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+.card .greg img{
+    width: 30px;
+}
+.card .greg .name{
+   font-weight: 800;
+   font-size: 13px;
+}
